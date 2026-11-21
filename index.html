@@ -54,7 +54,7 @@ transition:max-height .8s ease;
 }
 
 #packi.open{
-max-height:3000px;
+max-height:5000px;
 }
 
 .cards{
@@ -76,96 +76,3 @@ box-shadow:0 0 15px rgba(255,140,0,.4);
 
 .card img{
 width:100%;
-height:220px;
-object-fit:cover;
-display:block;
-}
-
-.info{
-padding:20px;
-}
-
-.info h2{
-color:#00bfff;
-}
-
-.download{
-display:inline-block;
-margin-top:10px;
-background:orange;
-color:black;
-padding:12px 25px;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-}
-</style>
-</head>
-<body>
-
-<div class="header">
-<div class="logo">DyzioPack</div>
-</div>
-
-<div class="hero">
-
-<button class="button" onclick="togglePacki()">
-📦 Texturepacki
-</button>
-
-<h1>Najlepsze Texturepacki Minecraft</h1>
-
-<p>Kliknij Texturepacki aby pokazać lub schować packi.</p>
-
-</div>
-
-<div id="packi">
-
-<div class="cards">
-
-<div class="card">
-
-<img src="crystal.png.webp">
-
-<div class="info">
-<h2>💎 Crystal Pack</h2>
-
-<a class="download"
-href="https://www.mediafire.com/file/g2y59pnxuhs4v10/Black_Pack.zip/file"
-target="_blank">
-Pobierz
-</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="mace.png.webp">
-
-<div class="info">
-<h2>⚒️ Mace Pack</h2>
-
-<a class="download"
-href="https://www.mediafire.com/file/x4acu372fy280vr/Mace_pvp.zip/file"
-target="_blank">
-Pobierz
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<script>
-function togglePacki(){
-document.getElementById("packi").classList.toggle("open");
-}
-</script>
-
-</body>
-</html>
