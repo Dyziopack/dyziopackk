@@ -2,53 +2,109 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DyzioPack</title>
 
 <style>
 body{
-    background:#111;
-    color:white;
-    font-family:Arial;
-    text-align:center;
-    margin:0;
+margin:0;
+font-family:Arial,sans-serif;
+background:#111;
+color:white;
 }
 
-h1{
-    background:orange;
-    color:black;
-    padding:20px;
-    margin:0;
+.header{
+background:#181818;
+padding:20px;
+border-bottom:4px solid orange;
+text-align:center;
 }
 
-button{
-    padding:15px 25px;
-    font-size:20px;
-    margin:20px;
-    cursor:pointer;
+.logo{
+font-size:50px;
+color:orange;
+font-weight:bold;
 }
 
-#packi{
-    display:none;
+.hero{
+background:linear-gradient(to bottom,#00bfff,#111);
+text-align:center;
+padding:60px 20px;
 }
 
-.pack{
-    background:#222;
-    border:2px solid orange;
-    border-radius:10px;
-    margin:20px auto;
-    width:350px;
-    padding:20px;
+.hero img{
+width:220px;
+border-radius:15px;
+cursor:pointer;
+border:3px solid orange;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+#packs{
+max-height:0;
+overflow:hidden;
+transition:max-height .8s ease;
+}
+
+#packs.open{
+max-height:7000px;
+}
+
+.cards{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+padding:30px;
+}
+
+.card{
+width:350px;
+background:#222;
+border:3px solid orange;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 0 15px rgba(255,140,0,.4);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+.info{
+padding:20px;
+}
+
+.info h2{
+color:#00bfff;
+}
+
+.download{
+display:inline-block;
+margin-top:10px;
+background:orange;
+color:black;
+padding:12px 25px;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
 }
 </style>
 </head>
 <body>
 
-<h1>DyzioPack</h1>
+<div class="header">
+<div class="logo">DyzioPack</div>
+</div>
 
-<button onclick="togglePacki()">📦 Texturepacki</button>
+<div class="hero">
 
-<div id="packi">
+<img src="pvp.jpg" onclick="togglePacks()">
 
-<div class="pack">
-<h2>💎 Crystal Pack</h2>
-<a href="https
+<h1>Najlepsze Texturepacki 
