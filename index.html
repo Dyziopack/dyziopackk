@@ -7,6 +7,184 @@
 
 <style>
 body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    color:white;
+    background:url("smile-dennis.gif") center center/cover fixed;
+}
+
+.overlay{
+    min-height:100vh;
+    background:rgba(0,0,0,0.55);
+}
+
+.header{
+    text-align:center;
+    padding:20px;
+    border-bottom:4px solid orange;
+}
+
+.logo{
+    font-size:60px;
+    color:orange;
+    font-weight:bold;
+}
+
+.hero{
+    text-align:center;
+    padding:30px;
+}
+
+.button{
+    background:#111;
+    color:white;
+    border:3px solid orange;
+    padding:20px 50px;
+    border-radius:15px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.stats{
+    max-width:500px;
+    margin:20px auto;
+    padding:20px;
+    background:rgba(0,0,0,.8);
+    border:3px solid orange;
+    border-radius:15px;
+}
+
+#packs{
+    display:none;
+    padding:20px;
+}
+
+.card{
+    max-width:450px;
+    margin:20px auto;
+    background:rgba(0,0,0,.85);
+    border:3px solid orange;
+    border-radius:15px;
+    padding:20px;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.download{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 20px;
+    background:orange;
+    color:black;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.downloads{
+    color:#00ff88;
+}
+</style>
+</head>
+<body>
+
+<div class="overlay">
+
+<div class="header">
+<div class="logo">DyzioPack</div>
+</div>
+
+<div class="hero">
+
+<button class="button" onclick="togglePacks()">
+📦 Texturepacki
+</button>
+
+<h1>Najlepsze Texturepacki Minecraft</h1>
+
+<div class="stats">
+<h2>📊 Statystyki</h2>
+<p>📦 Packów: 6</p>
+<p>⬇ Pobrania razem: 32</p>
+</div>
+
+</div>
+
+<div id="packs">
+
+<div class="card">
+<img src="monster.png">
+<h2>🟢 Monster Energy Pack</h2>
+<p class="downloads">⬇ Pobrania: 14</p>
+<a class="download" href="https://www.mediafire.com/file/a0x56yixemtg86i/Monster_Energy.zip/file" target="_blank">Pobierz</a>
+</div>
+
+<div class="card">
+<img src="crystal.png.webp">
+<h2>💎 Crystal Pack</h2>
+<p class="downloads">⬇ Pobrania: 9</p>
+<a class="download" href="https://www.mediafire.com/file/g2y59pnxuhs4v10/Black_Pack.zip/file" target="_blank">Pobierz</a>
+</div>
+
+<div class="card">
+<img src="mace.png.webp">
+<h2>⚒️ Mace Pack</h2>
+<p class="downloads">⬇ Pobrania: 8</p>
+<a class="download" href="https://www.mediafire.com/file/x4acu372fy280vr/Mace_pvp.zip/file" target="_blank">Pobierz</a>
+</div>
+
+<div class="card">
+<img src="nemosy.png">
+<h2>🔥 TXT POD NEMOSY</h2>
+<p class="downloads">⬇ Pobrania: 1</p>
+<a class="download" href="https://www.mediafire.com/file/5aj7bmspwirdthc/TXT_POD_NEMOSY_BY_JACOBSS.zip/file" target="_blank">Pobierz</a>
+</div>
+
+<div class="card">
+<img src="pvp.jpg">
+<h2>🎄 Christmas Pack</h2>
+<p class="downloads">⬇ Pobrania: 0</p>
+<a class="download" href="https://www.mediafire.com/file/qg4igsb64iot489/Kjega16_Christmas_Pack.zip/file" target="_blank">Pobierz</a>
+</div>
+
+<div class="card">
+<img src="pvp.jpg">
+<h2>👑 Dyzio Pack</h2>
+<p class="downloads">⬇ Pobrania: 0</p>
+<a class="download" href="https://www.mediafire.com/file/mycqjivfbuaoy26/Dyzio_Pack.zip/file" target="_blank">Pobierz</a>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function togglePacks(){
+    var packs=document.getElementById("packs");
+
+    if(packs.style.display==="block"){
+        packs.style.display="none";
+    }else{
+        packs.style.display="block";
+    }
+}
+</script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DyzioPack</title>
+
+<style>
+body{
 margin:0;
 font-family:Arial,sans-serif;
 color:white;
