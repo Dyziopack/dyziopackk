@@ -2,35 +2,146 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DyzioPack</title>
 
 <style>
-body{
+
+*{
 margin:0;
-font-family:Arial;
-background:black;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#0f0f0f;
 color:white;
 text-align:center;
 }
 
 h1{
 color:orange;
-margin-top:50px;
+font-size:60px;
+margin-top:40px;
+text-shadow:0 0 20px orange;
 }
 
-button{
-padding:15px 30px;
-font-size:24px;
+.texture-btn{
+padding:18px 40px;
+font-size:28px;
+font-weight:bold;
 background:orange;
 border:none;
-border-radius:10px;
+border-radius:15px;
 cursor:pointer;
+margin-top:20px;
+transition:.3s;
+}
+
+.texture-btn:hover{
+transform:scale(1.05);
+}
+
+.texture-open{
+animation:pixelBreak 1s forwards;
+}
+
+@keyframes pixelBreak{
+
+0%{
+opacity:1;
+transform:scale(1);
+filter:none;
+}
+
+50%{
+opacity:1;
+transform:scale(1.2);
+filter:blur(4px);
+}
+
+100%{
+opacity:0;
+transform:scale(0);
+filter:blur(10px);
+}
+
 }
 
 #packs{
 display:none;
-margin-top:30px;
+padding:40px;
 }
+
+.grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+}
+
+.card{
+
+width:340px;
+
+background:#1b1b1b;
+
+border:3px solid orange;
+
+border-radius:20px;
+
+overflow:hidden;
+
+opacity:0;
+
+transform:translateY(150px) scale(.5);
+
+transition:all .8s ease;
+
+}
+
+.card.show{
+opacity:1;
+transform:translateY(0) scale(1);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+.info{
+padding:20px;
+}
+
+.info h2{
+margin-bottom:10px;
+}
+
+.downloads{
+color:#00ff88;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.download{
+display:inline-block;
+padding:10px 20px;
+background:orange;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:10px;
+}
+
+.stats{
+margin-top:20px;
+color:#ccc;
+}
+
 </style>
 </head>
 
@@ -38,33 +149,118 @@ margin-top:30px;
 
 <h1>DyzioPack</h1>
 
-<button onclick="togglePacks()">
+<button class="texture-btn" id="textureBtn">
 📦 Texturepacki
 </button>
 
+<div class="stats">
+📦 Packów: 6 • ⬇ Pobrania: 32
+</div>
+
 <div id="packs">
 
-<h2>💎 Crystal Pack</h2>
+<div class="grid">
 
-<h2>⚒️ Mace Pack</h2>
-
+<div class="card">
+<img src="monster.png">
+<div class="info">
 <h2>🟢 Monster Energy Pack</h2>
+<div class="downloads">⬇ Pobrania: 14</div>
+<a class="download" href="https://www.mediafire.com/file/a0x56yixemtg86i/Monster_Energy.zip/file" target="_blank">
+Pobierz
+</a>
+</div>
+</div>
+
+<div class="card">
+<img src="crystal.png.webp">
+<div class="info">
+<h2>💎 Crystal Pack</h2>
+<div class="downloads">⬇ Pobrania: 9</div>
+<a class="download" href="https://www.mediafire.com/file/g2y59pnxuhs4v10/Black_Pack.zip/file" target="_blank">
+Pobierz
+</a>
+</div>
+</div>
+
+<div class="card">
+<img src="mace.png.webp">
+<div class="info">
+<h2>⚒️ Mace Pack</h2>
+<div class="downloads">⬇ Pobrania: 8</div>
+<a class="download" href="https://www.mediafire.com/file/x4acu372fy280vr/Mace_pvp.zip/file" target="_blank">
+Pobierz
+</a>
+</div>
+</div>
+
+<div class="card">
+<img src="nemosy.png">
+<div class="info">
+<h2>🔥 TXT POD NEMOSY</h2>
+<div class="downloads">⬇ Pobrania: 1</div>
+<a class="download" href="https://www.mediafire.com/file/5aj7bmspwirdthc/TXT_POD_NEMOSY_BY_JACOBSS.zip/file" target="_blank">
+Pobierz
+</a>
+</div>
+</div>
+
+<div class="card">
+<img src="pvp.jpg">
+<div class="info">
+<h2>🎄 Christmas Pack</h2>
+<div class="downloads">⬇ Pobrania: 0</div>
+<a class="download" href="https://www.mediafire.com/file/qg4igsb64iot489/Kjega16_Christmas_Pack.zip/file" target="_blank">
+Pobierz
+</a>
+</div>
+</div>
+
+<div class="card">
+<img src="pvp.jpg">
+<div class="info">
+<h2>👑 Dyzio Pack</h2>
+<div class="downloads">⬇ Pobrania: 0</div>
+<a class="download" href="https://www.mediafire.com/file/mycqjivfbuaoy26/Dyzio_Pack.zip/file" target="_blank">
+Pobierz
+</a>
+</div>
+</div>
+
+</div>
 
 </div>
 
 <script>
+
 function togglePacks(){
 
-var packs=document.getElementById("packs");
+const btn=document.getElementById("textureBtn");
 
-if(packs.style.display==="block"){
-packs.style.display="none";
-}
-else{
+const packs=document.getElementById("packs");
+
+btn.classList.add("texture-open");
+
+setTimeout(()=>{
+
 packs.style.display="block";
-}
+
+document
+.querySelectorAll(".card")
+.forEach((card,index)=>{
+
+setTimeout(()=>{
+
+card.classList.add("show");
+
+},index*150);
+
+});
+
+},900);
 
 }
+
 </script>
 
 </body>
