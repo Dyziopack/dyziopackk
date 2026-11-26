@@ -15,9 +15,23 @@ box-sizing:border-box;
 
 body{
 font-family:Arial,sans-serif;
-background:#0f0f0f;
+background:url("smile-dennis.gif");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 color:white;
 text-align:center;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.60);
+z-index:-1;
 }
 
 h1{
@@ -45,8 +59,9 @@ background:#ffbf00;
 
 .stats{
 margin-bottom:25px;
-color:#ccc;
+color:white;
 font-size:18px;
+font-weight:bold;
 }
 
 #packs{
@@ -75,3 +90,150 @@ padding:30px;
 }
 
 .card{
+width:340px;
+background:rgba(0,0,0,.85);
+border:3px solid orange;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 0 25px rgba(255,165,0,.4);
+
+opacity:0;
+transform:translateY(300px);
+transition:all .8s ease;
+}
+
+#packs.open .card{
+opacity:1;
+transform:translateY(0);
+}
+
+#packs.open .card:nth-child(1){transition-delay:.1s;}
+#packs.open .card:nth-child(2){transition-delay:.2s;}
+#packs.open .card:nth-child(3){transition-delay:.3s;}
+#packs.open .card:nth-child(4){transition-delay:.4s;}
+#packs.open .card:nth-child(5){transition-delay:.5s;}
+#packs.open .card:nth-child(6){transition-delay:.6s;}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+.info{
+padding:20px;
+}
+
+.info h2{
+margin-bottom:10px;
+}
+
+.downloads{
+color:#00ff88;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.download{
+display:inline-block;
+padding:10px 20px;
+background:orange;
+color:black;
+font-weight:bold;
+text-decoration:none;
+border-radius:10px;
+}
+
+.download:hover{
+background:#ffbf00;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>DyzioPack</h1>
+
+<button class="texture-btn" onclick="togglePacks()">
+📦 Texturepacki
+</button>
+
+<div class="stats">
+📦 Packów: 6 • ⬇ Pobrań: 32
+</div>
+
+<div id="packs">
+
+<div class="grid">
+
+<div class="card">
+<img src="monster.png">
+<div class="info">
+<h2>🟢 Monster Energy Pack</h2>
+<div class="downloads">⬇ Pobrania: 14</div>
+<a class="download" href="https://www.mediafire.com/file/a0x56yixemtg86i/Monster_Energy.zip/file" target="_blank">Pobierz</a>
+</div>
+</div>
+
+<div class="card">
+<img src="crystal.png.webp">
+<div class="info">
+<h2>💎 Crystal Pack</h2>
+<div class="downloads">⬇ Pobrania: 9</div>
+<a class="download" href="https://www.mediafire.com/file/g2y59pnxuhs4v10/Black_Pack.zip/file" target="_blank">Pobierz</a>
+</div>
+</div>
+
+<div class="card">
+<img src="mace.png.webp">
+<div class="info">
+<h2>⚒️ Mace Pack</h2>
+<div class="downloads">⬇ Pobrania: 8</div>
+<a class="download" href="https://www.mediafire.com/file/x4acu372fy280vr/Mace_pvp.zip/file" target="_blank">Pobierz</a>
+</div>
+</div>
+
+<div class="card">
+<img src="nemosy.png">
+<div class="info">
+<h2>🔥 TXT POD NEMOSY</h2>
+<div class="downloads">⬇ Pobrania: 1</div>
+<a class="download" href="https://www.mediafire.com/file/5aj7bmspwirdthc/TXT_POD_NEMOSY_BY_JACOBSS.zip/file" target="_blank">Pobierz</a>
+</div>
+</div>
+
+<div class="card">
+<img src="pvp.jpg">
+<div class="info">
+<h2>🎄 Christmas Pack</h2>
+<div class="downloads">⬇ Pobrania: 0</div>
+<a class="download" href="https://www.mediafire.com/file/qg4igsb64iot489/Kjega16_Christmas_Pack.zip/file" target="_blank">Pobierz</a>
+</div>
+</div>
+
+<div class="card">
+<img src="pvp.jpg">
+<div class="info">
+<h2>👑 Dyzio Pack</h2>
+<div class="downloads">⬇ Pobrania: 0</div>
+<a class="download" href="https://www.mediafire.com/file/mycqjivfbuaoy26/Dyzio_Pack.zip/file" target="_blank">Pobierz</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function togglePacks(){
+document.getElementById("packs")
+.classList.toggle("open");
+}
+
+</script>
+
+</body>
+</html>
