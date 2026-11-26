@@ -6,20 +6,25 @@
 <title>DyzioPack</title>
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
-margin:0;
 font-family:Arial,sans-serif;
-color:white;
 background:url("smile-dennis.gif");
 background-size:cover;
 background-position:center;
 background-attachment:fixed;
+color:white;
 }
 
 .overlay{
-background:rgba(0,0,0,.55);
 min-height:100vh;
+background:rgba(0,0,0,.55);
+padding:30px;
 }
 
 .logo{
@@ -27,42 +32,53 @@ text-align:center;
 font-size:70px;
 font-weight:bold;
 color:orange;
-padding:25px;
-text-shadow:0 0 20px orange;
+text-shadow:0 0 25px orange;
+margin-bottom:25px;
 }
 
-.center{
-text-align:center;
-}
-
-.button{
-background:black;
-color:white;
+.topbox{
+max-width:700px;
+margin:auto;
+background:rgba(0,0,0,.8);
 border:3px solid orange;
-padding:18px 45px;
+border-radius:20px;
+padding:20px;
+text-align:center;
+margin-bottom:25px;
+}
+
+.texture-btn{
+background:orange;
+color:black;
 font-size:28px;
 font-weight:bold;
+border:none;
 border-radius:15px;
+padding:18px 40px;
 cursor:pointer;
+margin:15px 0;
 }
 
-.button:hover{
-background:#111;
+.texture-btn:hover{
+background:#ffbf00;
 }
 
 .stats{
-max-width:500px;
-margin:20px auto;
-background:rgba(0,0,0,.85);
-border:3px solid orange;
-border-radius:15px;
-padding:20px;
-text-align:center;
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:15px;
+flex-wrap:wrap;
+}
+
+.stat{
+background:rgba(255,255,255,.08);
+padding:12px 20px;
+border-radius:10px;
 }
 
 #packs{
 display:none;
-padding:30px;
 }
 
 .grid{
@@ -73,4 +89,85 @@ gap:25px;
 }
 
 .card{
-width:
+width:350px;
+background:rgba(0,0,0,.88);
+border:3px solid orange;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 0 20px rgba(255,165,0,.4);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+.info{
+padding:18px;
+}
+
+.info h2{
+margin-bottom:10px;
+}
+
+.downloads{
+color:#00ff88;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.download{
+display:inline-block;
+background:orange;
+color:black;
+text-decoration:none;
+padding:10px 20px;
+border-radius:10px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="logo">
+DyzioPack
+</div>
+
+<div class="topbox">
+
+<h1>Najlepsze Texturepacki Minecraft</h1>
+
+<button class="texture-btn" onclick="togglePacks()">
+📦 Texturepacki
+</button>
+
+<div class="stats">
+
+<div class="stat">
+📦 Packów: 6
+</div>
+
+<div class="stat">
+⬇ Pobrań: 32
+</div>
+
+</div>
+
+</div>
+
+<div id="packs">
+
+<div class="grid">
+
+<div class="card">
+<img src="monster.png">
+<div class="info">
+<h2>🟢 Monster Energy Pack</h2>
+<div class="downloads">⬇ Pobrania: 14</div>
+<a class="download" href="https://www.mediafire.com/file/a0x56yixemtg86i/Monster_Energy.zip/file" target="_blank">Pobierz</a>
+<
