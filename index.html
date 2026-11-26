@@ -1,74 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DyzioPack</title>
+
 <style>
 
-#packs{
-max-height:0;
-overflow:hidden;
-opacity:0;
-transform:translateY(-1000px) scale(.3);
-transition:
-max-height 3s ease,
-opacity 2s ease,
-transform 3s ease;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-#packs.open{
-max-height:10000px;
-opacity:1;
-transform:translateY(0px) scale(1);
+body{
+font-family:Arial,sans-serif;
+background:url("smile-dennis.gif");
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:white;
 }
 
-.card{
-width:340px;
-background:rgba(0,0,0,.88);
-border:3px solid orange;
-border-radius:20px;
-overflow:hidden;
-
-opacity:0;
-transform:scale(.1);
-
-transition:
-transform 2s cubic-bezier(.17,.89,.32,1.3),
-opacity 2s;
+.overlay{
+background:rgba(0,0,0,.55);
+min-height:100vh;
+padding:30px;
 }
 
-#packs.open .card{
-opacity:1;
-transform:scale(1);
-}
-
-#packs.open .card:nth-child(1){
-transition-delay:.1s;
-}
-
-#packs.open .card:nth-child(2){
-transition-delay:.2s;
-}
-
-#packs.open .card:nth-child(3){
-transition-delay:.3s;
-}
-
-#packs.open .card:nth-child(4){
-transition-delay:.4s;
-}
-
-#packs.open .card:nth-child(5){
-transition-delay:.5s;
-}
-
-#packs.open .card:nth-child(6){
-transition-delay:.6s;
-}
-
-</style>
-
-<script>
-
-document.getElementById("textureBtn").addEventListener("click", function(){
-
-document.getElementById("packs").classList.toggle("open");
-
-});
-
-</script>
+.logo{
+text-align:center;
+font-size:70px;
+font-weight:bold;
+color:orange;
+text-shadow:0 
