@@ -2,35 +2,70 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DyzioPack</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-font-family:Arial,sans-serif;
-background:url("smile-dennis.gif");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-background-attachment:fixed;
+margin:0;
+font-family:Arial;
+background:black;
 color:white;
-}
-
-.overlay{
-min-height:100vh;
-background:rgba(0,0,0,.55);
-padding:30px;
-}
-
-.logo{
 text-align:center;
-font-size:70px;
-font-weight:bold;
+}
+
+h1{
 color:orange;
-text-shadow:0 0 20px orange;
+margin-top:50px;
+}
+
+button{
+padding:15px 30px;
+font-size:24px;
+background:orange;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+#packs{
+display:none;
+margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>DyzioPack</h1>
+
+<button onclick="togglePacks()">
+📦 Texturepacki
+</button>
+
+<div id="packs">
+
+<h2>💎 Crystal Pack</h2>
+
+<h2>⚒️ Mace Pack</h2>
+
+<h2>🟢 Monster Energy Pack</h2>
+
+</div>
+
+<script>
+function togglePacks(){
+
+var packs=document.getElementById("packs");
+
+if(packs.style.display==="block"){
+packs.style.display="none";
+}
+else{
+packs.style.display="block";
+}
+
+}
+</script>
+
+</body>
+</html>
